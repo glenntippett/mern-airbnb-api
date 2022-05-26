@@ -8,14 +8,11 @@ interface Updates {
 
 const resolvers = {
   Query: {
-    hello: () => {
-      return 'Hello there'
-    },
     getAllPosts: async () => {
       return await Post.find()
     },
-    getAllListings: async () => {
-      return await Listing.find().limit(20)
+    getAllListings: async (_parent, { limit }, _context, _info) => {
+      return await Listing.find().limit(limit)
     },
     getPost: async (_parent, { id }, _context, _info) => {
       return await Post.findById(id)

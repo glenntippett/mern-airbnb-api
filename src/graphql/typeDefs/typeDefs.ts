@@ -22,10 +22,8 @@ const typeDefs = gql`
   }
 
   type Query {
-    hello: String
-
     getAllPosts: [Post]
-    getAllListings: [Listing]
+    getAllListings(offset: Int, limit: Int): [Listing]
     getPost(id: ID): Post
   }
 
