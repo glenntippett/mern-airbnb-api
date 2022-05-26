@@ -6,8 +6,7 @@
   "scripts": {
     "start:dev": "NODE_ENV=dev concurrently \"npx tsc --watch\" \"npx nodemon src/index.ts\"",
     "start:prod": "NODE_ENV=prod concurrently \"npx tsc --watch\" \"nodemon src/index.ts\"",
-    "build:tsc": "npx tsc",
-    "babel": "babel src/index.ts --out-file dist/bundle.js"
+    "build:tsc": "npx tsc"
   },
   "dependencies": {
     "apollo-server-express": "^3.7.0",
