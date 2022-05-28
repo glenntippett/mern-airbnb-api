@@ -14,11 +14,18 @@ const typeDefs = gql`
     xl_picture_url: String
   }
 
+  type Address {
+    street: String
+    suburb: String
+    country: String
+  }
+
   type Listing {
     _id: ID
     name: String
     summary: String
     images: ListingImage
+    address: Address
   }
 
   type Query {

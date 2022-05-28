@@ -10,6 +10,9 @@ const ListingSchema = new Schema({
   },
   images: {
     type: Object
+  },
+  address: {
+    type: Object
   }
 })
 

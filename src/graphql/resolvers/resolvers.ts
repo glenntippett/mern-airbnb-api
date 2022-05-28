@@ -12,7 +12,7 @@ const resolvers = {
       return await Post.find()
     },
     getAllListings: async (_parent, { limit }, _context, _info) => {
-      return await Listing.find().limit(limit)
+      return await Listing.find({ 'address': { $ne:null } }).limit(limit)
     },
     getPost: async (_parent, { id }, _context, _info) => {
       return await Post.findById(id)
